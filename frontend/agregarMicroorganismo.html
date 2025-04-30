@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalle del Análisis Microbiológico</title>
+    <link rel="stylesheet" href="/styles/agregarMicroorganismo.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+
+    <div class="barra-superior">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Firma_TEC.svg/1280px-Firma_TEC.svg.png" alt="Barra superior">
+    </div>
+
+    <h1>Agregar Microorganismo</h1>
+
+    <br><br><br>
+
+    <div>
+        <h1>Agregar Microorganismo</h1>
+        <label for="grupo">Grupo:</label>
+        <select id="grupo" name="grupo">
+            <option value="hongos">Hongos</option>
+            <option value="pseudo_hongos">Pseudo-hongos</option>
+            <option value="levaduras">Levaduras</option>
+            <option value="bacterias anerobicas">Bacterias anaerobicas</option>
+            <option value="bacterias aerobicas">Bacterias aerobicas</option>
+            <option value="Actinomycetes">Actinomycetes</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="nombreMicroorganismo">Nombre del Microorganismo:</label>
+        <input type="text" id="nombreMicroorganismo" name="nombreMicroorganismo">
+    </div>
+
+    <button onclick="agregarMicroorganismo()">Agregar Microorganismo</button>
+
+    <script src="/scripts/agregarMicroorganismo.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalle del Análisis Microbiológico</title>
+    <link rel="stylesheet" href="/styles/resultado.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+</head>
+<body>
+
+    <div class="barra-superior">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Firma_TEC.svg/1280px-Firma_TEC.svg.png" alt="Barra superior">
+    </div>
+
+    <br><br><br><br><br><br>
+    <h1>Resultado del Análisis Microbiológico</h1>
+    <label for="identificadorSelect">Seleccione Identificador del informe que acaba de crear, o seleccione alguno de su eleccion:</label>
+    <br><br>
+    <select id="identificadorSelect" onchange="cargarDetalle()">
+
+    </select>
+
+    <div id="detalleContainer">
+        <div id="contenidoCapturable">
+
+            <br><br>
+
+            <h2>Información General:</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Identificador de Muestra</th>
+                        <th>Unidad de medida(UM)</th>
+                        <th>Descripción de Muestra</th>
+                        <th>Usuario</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaInformacionGeneral">
+
+                </tbody>
+            </table>
+
+            <br><br>
+
+            <h2>Información de Resultados:</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Microorganismo identificado</th>
+                        <th>Factor de Conversión</th>
+                        <th>Dilución Empleada</th>
+                        <th>UFC/(UM)-1</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaInformacionResultados">
+
+                </tbody>
+            </table>
+        </div>
+
+        <br><br><br>
+        <button onclick="descargarInformacion()">Descargar Información</button>
+
+    </div>
+
+
+    <button class="boton-menu-principal" onclick="volverAlMenu()">Volver al Menú Principal</button>
+
+    <br><br><br>
+
+    <script src="/scripts/resultado.js"></script>
+</body>
+</html>

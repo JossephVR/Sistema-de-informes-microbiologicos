@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Reporte</title>
+    <link rel="stylesheet" href="/styles/analisis.css">
+</head>
+<body>
+
+    <div class="header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Firma_TEC.svg/1280px-Firma_TEC.svg.png" alt="Logo TEC">
+    </div>
+
+    <h1>Formulario de Reporte</h1>
+  <!-- Sección "Información General" -->
+
+    <!-- Sección "Datos del Microorganismo" -->
+    <div id="microorganismInfo">
+  
+        <h2>Informacion general</h2>
+        <form id="microorganismForm" action="/submit" method="post">
+            
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                <br><br>
+        
+                <label for="identificadorMuestra">Identificador de Muestra:</label>
+                <input type="text" id="identificadorMuestra" name="identificadorMuestra" required>
+                <br><br>
+        
+                <label for="nombreMuestra">Unidad de medida:</label>
+                <input type="text" id="nombreMuestra" name="nombreMuestra" required>
+                <br><br>
+
+                
+        
+                <label for="descripcion">Descripción:</label>
+                <input type="text" id="descripcion" name="descripcion" required>
+                <br><br><br><br><br><br>
+
+                <label for="nombre_usuario">Nombre de Usuario:</label>
+                <select id="nombre_usuario" name="nombre_usuario" required>
+                <!-- Options will be dynamically filled based on the users in the database -->
+                </select>
+                <br><br>
+
+                <h2>Informacion microorganismo</h2>
+
+                <br>
+        
+                <h3> Grupo</h3>
+                
+                
+                <select id="grupo" name="grupo" onchange="fillMicroorganisms()">
+                    <option value="hongos">Hongos</option>
+                    <option value="pseudo-hongos">Pseudo-hongos</option>
+                    <option value="levaduras">Levaduras</option>
+                    <option value="bacterias anaerobicas">Bacterias Anaeróbicas</option>
+                    <option value="bacterias aerobicas">Bacterias Aeróbicas</option>
+                    <option value="Actinomycetes">Actinomycetes</option>
+                </select>
+                <br><br>
+        
+                <label for="microorganismo">Microorganismo:</label>
+                <select id="microorganismo" name="microorganismo" required>
+                    <!-- Options will be dynamically filled based on the selected group -->
+                </select>
+                <br><br><br>
+        
+                <label for="factorConversion">Factor de Conversión:</label>
+                <input type="number" id="factorConversion" name="factorConversion" required>
+                <br><br>
+        
+                <label for="dilucionEmpleada">Dilución Empleada:</label>
+                <input type="number" id="dilucionEmpleada" name="dilucionEmpleada" required>
+                <br><br>
+        
+                <label for="r1">R1:</label>
+                <input type="number" id="r1" name="r1" required>
+                <br><br>
+        
+                <label for="r2">R2:</label>
+                <input type="number" id="r2" name="r2" required>
+                <br><br>
+        
+                <label for="r3">R3:</label>
+                <input type="number" id="r3" name="r3" required>
+                <br><br>
+        
+                <br><br>
+                <input type="submit" value="Agregar">
+        </form>
+
+    </div>
+
+    <button id="finishButton">Acabar y Generar</button>
+    
+    <script src="/scripts/analisis.js"></script>
+</body>
+</html>

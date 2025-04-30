@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalle del Análisis Microbiológico</title>
+    <link rel="stylesheet" href="/styles/eliminarMicroorganismo.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+</head>
+<body>
+
+    <div class="barra-superior">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Firma_TEC.svg/1280px-Firma_TEC.svg.png" alt="Barra superior">
+    </div>
+
+    
+
+    <br><br><br>
+
+    <div>
+        <br><br><br>
+        <h1>Eliminar Microorganismo</h1>
+        <br><br><br>
+        <label for="grupo">Grupo:</label>
+        <select id="grupo" name="grupo" onchange="cargarMicroorganismos()">
+            <option value="hongos">Hongos</option>
+            <option value="pseudo-hongos">Pseudo-hongos</option>
+            <option value="levaduras">Levaduras</option>
+            <option value="bacterias anaerobicas">Bacterias Anaeróbicas</option>
+            <option value="bacterias aerobicas">Bacterias Aeróbicas</option>
+            <option value="Actinomycetes">Actinomycetes</option>
+        </select>
+    </div>
+    
+    <label for="microorganismo">Microorganismo:</label>
+    <select id="microorganismo" name="microorganismo"></select>
+
+    <!-- Agrega el botón de eliminar -->
+    <button onclick="eliminarMicroorganismo()">Eliminar Microorganismo</button>
+    
+
+    <script src="/scripts/eliminarMicroorganismo.js"></script>
+
+</body>
+</html>
